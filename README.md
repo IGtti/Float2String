@@ -7,15 +7,15 @@ I use this function on a STM32 IoT project (C language), which sends several sen
 Examples:
 
 Floating point: 12.345678<br/>
- 2 decimal points output string: 12.35 --> 5 bytes string + the null character '\0' --> 6 bytes
+ 2 decimal points output string: 12.35 --> 5 bytes string + the null character '\0' --> 6 bytes<br/>
  1 decimal point output string: 12.3 --> 4 bytes string + the null character '\0' --> 5 bytes
 
-Floating point: -12.345678 
- 2 decimal points output string: -12.35 --> 6 bytes string + the null character '\0' --> 7 bytes
+Floating point: -12.345678<br/>
+ 2 decimal points output string: -12.35 --> 6 bytes string + the null character '\0' --> 7 bytes<br/>
  1 decimal point output string: -12.3 --> 5 bytes string + the null character '\0' --> 6 bytes
 
-Floating point: 0.00045 (or -0.00045) 
- 2 decimal points output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes
+Floating point: 0.00045 (or -0.00045)<br/>
+ 2 decimal points output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes<br/>
  1 decimal point output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes
 
 Buffer size must be dimensioned according to the expected range of digits. In the code 10 bytes size is reserved, fitting my original needs.
