@@ -4,6 +4,19 @@ Very simple and ligthweight function to convert a floating point variable to a c
 
 I use this function on a STM32 IoT project (C language), which sends several sensors information to the MQTT broker. Floating values must be converted to a string during the data buffer preparation.
 
+Two files available, select according to your need:<br/>
+float2string 1dp.c --> 1 decimal point<br/>
+float2string 2dp.c --> 2 decimal points
+
+In the Main function:
+
+char c_Temperature[FLOATSTRINGSIZE];    // defining the buffer to receive the converted data<br/>
+float f_Temp;                           // defining the float variable
+
+f_Temp = 12.345678;
+
+Float2String(f_Temp, c_Temperature);    // Convert float to string
+
 Examples:
 
 Floating point: 12.345678<br/>
@@ -18,5 +31,5 @@ Floating point: 0.00045 (or -0.00045)<br/>
  2 decimal points output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes<br/>
  1 decimal point output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes
 
-Buffer size must be dimensioned according to the expected range of digits. In the code 10 bytes size is reserved, fitting my original needs.
+Buffer size (FLOATSTRINGSIZE) must be dimensioned according to the expected range of digits. In my application 10 bytes size is reserved, fitting my original needs.<br/>
 The second parameter of the function snprintf can follow the buffer size.
