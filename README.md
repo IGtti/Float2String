@@ -7,6 +7,7 @@ I use this function on a STM32 IoT project (C language), which sends several sen
 Examples:
 
 Floating point: 12.345678
+
  2 decimal points output string: 12.35 --> 5 bytes string + the null character '\0' --> 6 bytes
  1 decimal point output string: 12.3 --> 4 bytes string + the null character '\0' --> 5 bytes
 
