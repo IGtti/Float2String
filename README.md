@@ -1,6 +1,6 @@
 # Float2String
 
-Very simple and ligthweight function to convert a floating point variable to a char string, in order to replace the traditional "%f" format specifier, avoiding the huge memory consumption when this floating support mode is enabled.
+Simple and ligthweight function to convert a floating point variable to a char array, in order to replace the traditional "%f" format specifier, avoiding the huge memory consumption when this floating support mode is enabled.
 
 I use this function on a STM32 IoT project (C language), which sends several sensors information to the MQTT broker. Floating values must be converted to a string during the data buffer preparation.
 
@@ -32,4 +32,4 @@ Floating point: 0.00045 (or -0.00045)<br/>
  1 decimal point output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes
 
 Buffer size (FLOATSTRINGSIZE) must be dimensioned according to the expected range of digits. In my application 10 bytes size is reserved, fitting my original needs.<br/>
-The second parameter of the function snprintf can follow the buffer size.
+The second parameter (size) of the function "snprintf" can follow the buffer size.
