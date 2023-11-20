@@ -32,4 +32,3 @@ Floating point: 0.00045 (or -0.00045)<br/>
  1 decimal point output string: 0 --> 1 byte string + the null character '\0' --> 2 bytes
 
 Buffer size (FLOATSTRINGSIZE) must be dimensioned according to the expected range of digits. In my application 10 bytes size is reserved, fitting my original needs.<br/>
-The second parameter (size) of the function "snprintf" can follow the buffer size.
